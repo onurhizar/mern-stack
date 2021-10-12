@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://onur123:74bhf726gd81s@cluster0.icqlu.mongodb.net/communityDB?retryWrites=true&w=majority",
+    "jwtSecret": "mysecretToken673234*-1!"
+}
