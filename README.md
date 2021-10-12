@@ -6,10 +6,9 @@ https://www.github.com/onurhizar
 - - -
 
 # TODO
-- login "/api/login" db and crypto set
-- register "/api/register" db and crypto set
-- auth middleware
-- user model
+- DDoS protection
+- invalid token counter and block the IP
+- IP and username block
 
 - - -
 
@@ -24,3 +23,6 @@ https://www.github.com/onurhizar
 - added register system to database with bcrypt encryption
 - added auth middleware: ./middleware/auth.js
 - added route "/api/profile" which uses auth middleware, sends user details back
+
+## v1.0.2
+- added login system with auth middleware, sends back a token
