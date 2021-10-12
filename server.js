@@ -11,7 +11,8 @@ app.use(express.json({extended: false}));  // for req.body
 app.get('/',(req,res)=>res.send('Main Page, API is running...'))
 
 // Define routes
-app.use('/api/login',require('./routes/api/login'));
-app.use('/api/register',require('./routes/api/register'));
+app.use('/api/login', require('./routes/api/login'));
+app.use('/api/register', require('./routes/api/register'));
+app.use('/api/profile', require('./routes/api/profile'));
 
 app.listen(PORT,()=>console.log(`Server started on port ${PORT}`))
