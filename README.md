@@ -9,6 +9,7 @@ https://www.github.com/onurhizar
 - DDoS protection
 - invalid token counter and block the IP
 - IP and username block
+- Connect frontend and backend
 
 - - -
 
@@ -26,3 +27,9 @@ https://www.github.com/onurhizar
 
 ## v1.0.2
 - added login system with auth middleware, sends back a token
+
+## v1.0.3
+- React init
+- Index, Login, Register, Blog and Forum page initials
+- Login and Register page forms
+- Bootstrap
