@@ -39,3 +39,6 @@ https://www.github.com/onurhizar
 - client's package.json is edited to fix proxy errors by connecting API
 - nodemon and concurrently are installed
 
+## v1.0.5
+- Show alert banner on register/login pages
+- Save the token to the localStorage

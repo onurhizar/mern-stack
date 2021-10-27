@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, Fragment} from 'react'
+import BasicAlert from '../layout/BasicAlert';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const Register = () => {
         password2: ""
     });
 
+    const [alert, setAlert] = useState({show:false, type:"primary", text:""}); 
     const {username, email, password, password2} = formData;
 
     const onChange = e => {
@@ -28,11 +30,27 @@ const Register = () => {
 
             fetch('/api/register', requestOptions)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => {
+                console.log(data);
+                if (data.errors !== undefined){
+                    let errorMessage = "Error! "+data.errors[0].msg
+                    setAlert({...alert, show:true, type:"danger",
+                        text:errorMessage});
+                }
+                else if (data.token !== undefined){
+                    setAlert({...alert, show:true, type:"success",
+                        text:"Congratulations!"});
+                    localStorage.setItem("token", data.token);
+                }
+            });
+
+            
         }
     }
 
     return (
+        <Fragment>
+        {alert.show && <BasicAlert type={alert.type} text={alert.text}/>}
         <form className="form" onSubmit={e=>onSubmit(e)}>
             <div className="form-group mb-2">
                 <input type="email" 
@@ -75,6 +93,7 @@ const Register = () => {
 
             <button type="submit" className="form-group btn btn-primary">Login</button>
         </form>
+        </Fragment>
     )
 }
 
