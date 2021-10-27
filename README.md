@@ -33,3 +33,9 @@ https://www.github.com/onurhizar
 - Index, Login, Register, Blog and Forum page initials
 - Login and Register page forms
 - Bootstrap
+
+## v1.0.4
+- React and API backend connection, (login and register pages)
+- client's package.json is edited to fix proxy errors by connecting API
+- nodemon and concurrently are installed
+
