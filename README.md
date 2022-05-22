@@ -1,7 +1,4 @@
 # Community Website
-Written by Onur Hızar
-https://www.github.com/onurhizar
-
 
 - - -
 
